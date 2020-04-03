@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3644E3F9B28C151D914AC250 /* Pods_StripeSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB55FFBDB3425526FF84EBE7 /* Pods_StripeSdk.framework */; };
 		B3E7B58A1CC2AC0600A0062D /* StripeSdk.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* StripeSdk.m */; };
 /* End PBXBuildFile section */
 
@@ -24,8 +25,11 @@
 
 /* Begin PBXFileReference section */
 		134814201AA4EA6300B7C361 /* libStripeSdk.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libStripeSdk.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		30112578A6E1127B217391C2 /* Pods-StripeSdk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StripeSdk.debug.xcconfig"; path = "Target Support Files/Pods-StripeSdk/Pods-StripeSdk.debug.xcconfig"; sourceTree = "<group>"; };
 		B3E7B5881CC2AC0600A0062D /* StripeSdk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StripeSdk.h; sourceTree = "<group>"; };
 		B3E7B5891CC2AC0600A0062D /* StripeSdk.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StripeSdk.m; sourceTree = "<group>"; };
+		BB55FFBDB3425526FF84EBE7 /* Pods_StripeSdk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StripeSdk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA544FB09BAF0EE8C3A49E2C /* Pods-StripeSdk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StripeSdk.release.xcconfig"; path = "Target Support Files/Pods-StripeSdk/Pods-StripeSdk.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3644E3F9B28C151D914AC250 /* Pods_StripeSdk.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,7 +58,26 @@
 				B3E7B5881CC2AC0600A0062D /* StripeSdk.h */,
 				B3E7B5891CC2AC0600A0062D /* StripeSdk.m */,
 				134814211AA4EA7D00B7C361 /* Products */,
+				A12D2D9F712CD4729B772772 /* Pods */,
+				C73E4EBE8D1ABD5CC0B30525 /* Frameworks */,
 			);
+			sourceTree = "<group>";
+		};
+		A12D2D9F712CD4729B772772 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				30112578A6E1127B217391C2 /* Pods-StripeSdk.debug.xcconfig */,
+				EA544FB09BAF0EE8C3A49E2C /* Pods-StripeSdk.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C73E4EBE8D1ABD5CC0B30525 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BB55FFBDB3425526FF84EBE7 /* Pods_StripeSdk.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -63,6 +87,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 58B511EF1A9E6C8500147676 /* Build configuration list for PBXNativeTarget "StripeSdk" */;
 			buildPhases = (
+				8D16633870C4956E7D8B46AA /* [CP] Check Pods Manifest.lock */,
 				58B511D71A9E6C8500147676 /* Sources */,
 				58B511D81A9E6C8500147676 /* Frameworks */,
 				58B511D91A9E6C8500147676 /* CopyFiles */,
@@ -95,6 +120,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 58B511D21A9E6C8500147676;
@@ -106,6 +132,31 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8D16633870C4956E7D8B46AA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-StripeSdk-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		58B511D71A9E6C8500147676 /* Sources */ = {
@@ -214,22 +265,7 @@
 		};
 		58B511F01A9E6C8500147676 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			buildSettings = {
-				HEADER_SEARCH_PATHS = (
-				"$(inherited)",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"$(SRCROOT)/../../../React/**",
-					"$(SRCROOT)/../../react-native/React/**",
-				);
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = StripeSdk;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		58B511F11A9E6C8500147676 /* Release */ = {
-			isa = XCBuildConfiguration;
+			baseConfigurationReference = 30112578A6E1127B217391C2 /* Pods-StripeSdk.debug.xcconfig */;
 			buildSettings = {
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -238,7 +274,24 @@
 					"$(SRCROOT)/../../react-native/React/**",
 				);
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_NAME = StripeSdk;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		58B511F11A9E6C8500147676 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA544FB09BAF0EE8C3A49E2C /* Pods-StripeSdk.release.xcconfig */;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../../../React/**",
+					"$(SRCROOT)/../../react-native/React/**",
+				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = StripeSdk;
 				SKIP_INSTALL = YES;
 			};
