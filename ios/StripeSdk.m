@@ -1,4 +1,5 @@
 #import "StripeSdk.h"
+#import <UIKit/UIKit.h>
 
 @implementation StripeSdk
 
@@ -13,6 +14,13 @@ RCT_REMAP_METHOD(getDeviceName,
   UIDevice *deviceInfo = [UIDevice currentDevice];
 
   resolve(deviceInfo.name);
+}
+
+RCT_REMAP_METHOD(test,
+                 testResolver:(RCTPromiseResolveBlock)resolve
+                 testRejecter:(RCTPromiseRejectBlock)reject)
+{
+  resolve(@"A TEST");
 }
 
 @end

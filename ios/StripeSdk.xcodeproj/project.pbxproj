@@ -29,6 +29,9 @@
 		B3E7B5881CC2AC0600A0062D /* StripeSdk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StripeSdk.h; sourceTree = "<group>"; };
 		B3E7B5891CC2AC0600A0062D /* StripeSdk.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StripeSdk.m; sourceTree = "<group>"; };
 		BB55FFBDB3425526FF84EBE7 /* Pods_StripeSdk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StripeSdk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3E3D7C724387B60000905E1 /* third-party.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "third-party.xcconfig"; path = "../node_modules/react-native/React/third-party.xcconfig"; sourceTree = "<group>"; };
+		C3E3D7C924387F08000905E1 /* React-RCTFabric.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; name = "React-RCTFabric.podspec"; path = "../node_modules/react-native/React/React-RCTFabric.podspec"; sourceTree = "<group>"; };
+		C3E3D7CB243883A6000905E1 /* React.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = React.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA544FB09BAF0EE8C3A49E2C /* Pods-StripeSdk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StripeSdk.release.xcconfig"; path = "Target Support Files/Pods-StripeSdk/Pods-StripeSdk.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,6 +78,9 @@
 		C73E4EBE8D1ABD5CC0B30525 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C3E3D7CB243883A6000905E1 /* React.framework */,
+				C3E3D7C924387F08000905E1 /* React-RCTFabric.podspec */,
+				C3E3D7C724387B60000905E1 /* third-party.xcconfig */,
 				BB55FFBDB3425526FF84EBE7 /* Pods_StripeSdk.framework */,
 			);
 			name = Frameworks;
